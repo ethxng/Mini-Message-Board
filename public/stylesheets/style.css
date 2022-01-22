@@ -1,8 +1,75 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #F6E6D6;
 }
 
-a {
-  color: #00B7FF;
+h2{
+  color:darkseagreen;
+}
+
+.box{
+  border: 1px solid black;
+  min-height: 50px;
+  width: auto;
+  padding: 12px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.intro{
+  text-align: center;
+  font-size:30px;
+  color:#00B7FF;
+}
+
+#name{
+  font-size: 30px;
+  color:darkorange;
+}
+
+#nameInput{
+  margin-bottom: 50px;
+  height: 50px;
+  width: 500px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#textInput{
+  margin-bottom: 50px;
+  height: 100px;
+  width: 900px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#submitBtn{
+  height: 80px;
+  width: 150px;
+  border: none;
+  background-color: transparent;
+  font-size: 30px;
+  text-align: center;
+}
+
+#submitBtn:hover{
+  color:red;
+  background-color: darkmagenta;
+}
+
+.form{
+  margin-top: 50px;
+}
+
+#addBtn{
+  font-weight: bold;
+  color:deeppink;
+  background-color:#F1EEE8;
+  font-size: 30px;
+}
+
+#addBtn:hover{
+  color:violet;
 }

@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1.intro Add a message
+  form.form(method='POST' action='/new')
+    label#name Name: 
+    input#nameInput(name='yourName' type='text' placeholder='Your Name' required)
+    br
+    label#name Add a message: 
+    input#textInput(name='yourInput' type='text' placeholder='Add something meaningful here...' required)
+    br
+    input#submitBtn(type='submit')
