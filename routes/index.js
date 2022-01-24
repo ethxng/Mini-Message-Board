@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const { DateTime } = require('luxon');
 
 let messages = [
   {
@@ -13,14 +14,18 @@ let messages = [
     added: new Date()
   }
 ];
-/* GET home page. */
-/*router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});*/
 
+function convertDate(date){
+  return DateTime.fromJSDate(date).toLocaleString(DateTime.DATE_MED);
+}
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: "Mini Messageboard", messages: messages });
+  let formattedDate = [];
+  // convert the date to make it look good first before passing them in pug template
+  for (let i = 0; i < messages.length; i++){
+    formattedDate.push(convertDate(messages[i].added));
+  }
+  res.render('index', { title: "Mini Messageboard", messages: messages, date: formattedDate });
 });
 
 

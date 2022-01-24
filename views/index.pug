@@ -1,5 +1,6 @@
 extends layout
 
+
 block content
   h1 Your #{title}
   h2 Incoming Messages: 
@@ -7,5 +8,5 @@ block content
   form(method='GET' action='/new')
     button#addBtn Something on your mind?
   // loop thru each message and display it
-  each message in messages  
-    div.box= 'From ' + message.user + ' at ' + moment(message.added).format('MMMM Do YYYY, h:mm:ss a') + ': ' +  message.text
+  each val, index in messages 
+   div.box= 'From ' + val.user + ' on ' + date[index] + ': ' + val.text
